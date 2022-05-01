@@ -35,7 +35,17 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/bulma',
+    '@nuxtjs/axios'
   ],
+
+  axios: {
+    baseURL: 'http://localhost:8080/'
+  },
+
+  proxy: {
+    '/api': '/'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
