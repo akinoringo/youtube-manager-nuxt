@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    :to="`/videos/${videoId}`"
+    :to="`/video/${videoId}`"
   >
     <div class="box video-box">
       <article class="media">
