@@ -28,6 +28,47 @@
           </div>
         </div>
       </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div v-if="isLoggedIn" class="buttons">
+            <a
+              href="#"
+              class="button is-light"
+              @click.prevent="logout"
+            >
+              Logout
+            </a>
+          </div>
+          <div v-else class="buttons">
+            <nuxt-link
+              class="button is-primary"
+              to="/signup"
+            >
+              <strong>Sign Up</strong>
+            </nuxt-link>
+            <nuxt-link
+              class="button is-light"
+              to="/login"
+            >
+              Login
+            </nuxt-link>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
 </template>
+<script>
+export default {
+  computed: {
+    isLoggedIn() {
+      return !!this.$store.getters.isLoggedIn
+    }
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch('logout')
+    }
+  }
+}
+</script>

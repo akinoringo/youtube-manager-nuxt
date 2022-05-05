@@ -20,7 +20,7 @@
           <div class="field is-grouped">
             <div class="control">
               <button class="button is-link" @click="signUp">
-                SignUp
+                Sign Up
               </button>
             </div>
           </div>
